@@ -1,0 +1,119 @@
+{
+  "title": "Доктрины армии",
+  "nodes": [
+    {
+      "id": "drill",
+      "name": "Строевая подготовка",
+      "cost": 1,
+      "branch": "Пехота",
+      "effect": "+5% HP пехоты"
+    },
+    {
+      "id": "trenches",
+      "name": "Окопы",
+      "cost": 2,
+      "branch": "Пехота",
+      "requires": [
+        "drill"
+      ],
+      "effect": "+10% защиты в обороне"
+    },
+    {
+      "id": "assault",
+      "name": "Штурмовая тактика",
+      "cost": 2,
+      "branch": "Пехота",
+      "requires": [
+        "drill"
+      ],
+      "effect": "+10% урона в ближнем бою"
+    },
+    {
+      "id": "mg_nests",
+      "name": "Пулемётные гнёзда",
+      "cost": 3,
+      "branch": "Пехота",
+      "requires": [
+        "trenches"
+      ],
+      "effect": "+15% скорострельности пулемётов"
+    },
+    {
+      "id": "horses",
+      "name": "Конные заводы",
+      "cost": 1,
+      "branch": "Манёвр",
+      "effect": "-10% цены кавалерии"
+    },
+    {
+      "id": "raids",
+      "name": "Рейды по тылам",
+      "cost": 2,
+      "branch": "Манёвр",
+      "requires": [
+        "horses"
+      ],
+      "effect": "+20% урона по артиллерии"
+    },
+    {
+      "id": "motor",
+      "name": "Моторизация",
+      "cost": 3,
+      "branch": "Манёвр",
+      "requires": [
+        "horses",
+        "logistics"
+      ],
+      "effect": "+15% скорости всех отрядов"
+    },
+    {
+      "id": "logistics",
+      "name": "Логистика",
+      "cost": 1,
+      "branch": "Тыл",
+      "effect": "+10% дохода городов"
+    },
+    {
+      "id": "factories",
+      "name": "Заводы",
+      "cost": 2,
+      "branch": "Тыл",
+      "requires": [
+        "logistics"
+      ],
+      "effect": "открывает танки"
+    },
+    {
+      "id": "armor",
+      "name": "Броня",
+      "cost": 3,
+      "branch": "Тыл",
+      "requires": [
+        "factories"
+      ],
+      "effect": "+10% сопротивления пулям у танков"
+    },
+    {
+      "id": "blitz",
+      "name": "Блицкриг",
+      "cost": 4,
+      "branch": "Манёвр",
+      "requires": [
+        "motor",
+        "armor"
+      ],
+      "effect": "танки +25% урона первые 10 с боя"
+    },
+    {
+      "id": "barrage",
+      "name": "Огневой вал",
+      "cost": 3,
+      "branch": "Тыл",
+      "requires": [
+        "factories",
+        "trenches"
+      ],
+      "effect": "+20% радиуса взрыва артиллерии"
+    }
+  ]
+}
